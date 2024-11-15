@@ -92,7 +92,7 @@
             transform: translateY(1px);
         }
 
-        /* Effet de transition */
+        /* Animation Fade In */
         .link-button:nth-child(1) {
             animation: fadeIn 0.5s ease-out;
         }
@@ -109,10 +109,23 @@
             animation: fadeIn 1.1s ease-out;
         }
 
-        /* Animation Fade In */
+        /* Animation de vibration pour le bouton "200$ OFFERT !" */
+        .link-button:nth-child(1) {
+            animation: vibration 0.5s ease-in-out infinite;
+        }
+
         @keyframes fadeIn {
             0% { opacity: 0; transform: translateY(20px); }
             100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Animation de vibration */
+        @keyframes vibration {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            50% { transform: translateX(10px); }
+            75% { transform: translateX(-10px); }
+            100% { transform: translateX(0); }
         }
 
         /* Pour les écrans plus petits */
@@ -133,8 +146,8 @@
     <h1>My Links</h1>
 
     <div class="links-container">
-        <a href="https://docs.google.com/spreadsheets/d/1j-Mb2abrwOqO-3YnDy7bAkVhlHNw6_Pm1H1Bep8Lzos/edit?usp=sharing" class="link-button">SPREADSHEET</a>
         <a href="https://www.lovegobuy.com/?invite_code=WJYUAP" class="link-button">200$ OFFERT !</a>
+        <a href="https://docs.google.com/spreadsheets/d/1j-Mb2abrwOqO-3YnDy7bAkVhlHNw6_Pm1H1Bep8Lzos/edit?usp=sharing" class="link-button">SPREADSHEET</a>
         <a href="https://discord.gg/mM75ZePYUX" class="link-button">DISCORD</a>
         <a href="https://www.tiktok.com/@yourfavturkk__" class="link-button">TikTok</a>
     </div>
